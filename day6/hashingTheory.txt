@@ -1,0 +1,12 @@
+Topic for June 9 
+
+BLOOM FILTERS: 
+- A data structure to test if an element is a member of a set. False positive 
+chances exist but false negative is impossible 
+- Constant time for lookup, and storage
+- To reduce the false positive percentage to 1%, then 10X the total capacity
+and use 7 hash functions.
+- Deleting elements by reversing 1 to 0 shouldnt be possible 
+- It is a compromise bw false positive and storage space, based on use case which
+one can be prefered 
+
