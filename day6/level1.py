@@ -26,7 +26,6 @@ class myPaymentHashMap:
         if (current.upiID == key[0] and current.accountNumber == key[1] and current.transationID == key[2] and current.IFSCCode == key[3]): return True
         return False
 
-    
     def resize(self):
         old_array = self.array
         self.capacity *= 2
