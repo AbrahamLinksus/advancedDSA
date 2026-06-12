@@ -1,4 +1,4 @@
-# 
+# to traverse a tree
 
 dataArray = [4, 2, 6, 1, 3, 5, 7]
 
