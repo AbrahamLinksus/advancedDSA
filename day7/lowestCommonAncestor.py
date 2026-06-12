@@ -24,9 +24,9 @@ def findLowestCommonAncestor(head, label1, label2):
     leftTree = findLowestCommonAncestor(head.left, label1, label2)
     rightTree = findLowestCommonAncestor(head.right, label1, label2)
     if leftTree and rightTree: return head.data
+
     return leftTree or rightTree
-    
 
 
 tree1 = createTree()
-print(findLowestCommonAncestor(tree1, 8, 5))
+print("The lowest common ancestor is :",findLowestCommonAncestor(tree1, 8, 4))
