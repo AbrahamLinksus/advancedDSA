@@ -13,7 +13,7 @@ def createTree(array=[1,2,3,4,5,6,7,8,9], i=0):
     newNode.right = createTree(array, 2*i + 2)
     return newNode
 
-def iterativePostOrder(head):
+def iterativePostOrder(head): #not completeed
     if head is None: return None
     stack = [head]
     while stack:
@@ -22,7 +22,6 @@ def iterativePostOrder(head):
             stack.append(current.right)
         if current.left:
             stack.append(current.left)
-        print(current.data)
     return "done"
 
 tree1 = createTree()
