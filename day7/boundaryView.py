@@ -13,7 +13,12 @@ def createTree(array=[1,2,3,4,5,6,7,8,9], i=0):
     newNode.right = createTree(array, 2*i + 2)
     return newNode
 
-def findTopView(head):
+def findTopView(head, axis=0):
+    if head is None: return None
+    visitedHash = {}
+    
+
+
     return
 
 def findBottomView(head):
@@ -51,5 +56,4 @@ def findLeftView(head):
     return res
 
 tree1 = createTree()
-print(findRightView(tree1))
-print(findLeftView(tree1))
+print("Right View: ",findRightView(tree1))

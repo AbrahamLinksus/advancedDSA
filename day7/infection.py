@@ -24,15 +24,21 @@ def findDepth(root, label, depth=0, side=None):
     right = findDepth(root.right, label, 1 + depth, side or "r")
     return left or right
 
-
 def findInfection(root, label):
-    if root is None: return None
-    depth, side = findDepth(root, label)
-    leftHeight = findHeight(root.left) 
-    rightHeight = findHeight(root.right) 
-    print(leftHeight, rightHeight)
-    if side == 'r': return max(leftHeight+depth, rightHeight-depth)
-    return max(leftHeight-depth, rightHeight+depth)
+    def helper(node):
+        if node is None: return None, 0
+        if node.data == label: return 0, findHeight(node) - 1
+        leftDepth, leftBest = helper(node.left)
+        rightDepth, rightBest = helper(node.right)
+        if leftDepth is not None:
+            depth = leftDepth + 1
+            return depth, max(leftBest, depth + findHeight(node.right))
+        if rightDepth is not None:
+            depth = rightDepth + 1
+            return depth, max(rightBest, depth + findHeight(node.left))
+        return None, 0
+    _, best = helper(root)
+    return best
 
 
 tree1 = createTree()
