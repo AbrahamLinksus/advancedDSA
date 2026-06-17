@@ -19,7 +19,7 @@ class graph:
         return True
 
     def connectedComponents(self):
-        if not self.graph: return []
+        if self.graph == []: return []
         components = []
         for start in range(self.n):
             if self.visited[start] != -1:
