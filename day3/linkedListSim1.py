@@ -21,19 +21,6 @@ class XORLinkedList:
                 self.head = newNode
                 self.prevNode = newNode
                 break
-
             
-
-
-
-
-
-        
-
-    
-        
-    
-
-
 LL1 = XORLinkedList()
 LL1.append(10)
