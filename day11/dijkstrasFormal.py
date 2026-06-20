@@ -17,4 +17,4 @@ def dijkstra(adj, src):
     return dist
     
 result = dijkstra([[(1, 4), (2, 1)], [(2, 2)], [(3, 5)], [(4, 3)], []], 0)
-print(*result)
+print(result)
